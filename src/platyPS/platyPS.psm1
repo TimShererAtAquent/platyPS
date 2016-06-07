@@ -1579,6 +1579,7 @@ function ConvertPsObjectsToMamlModel
             $SyntaxObject = New-Object -TypeName Markdown.MAML.Model.MAML.MamlSyntax
 
             $SyntaxObject.ParameterSetName = $ParameterSet.Name
+            $SyntaxObject.IsDefault = $ParameterSet.IsDefault
 
             foreach($Parameter in $ParameterSet.Parameters)
             {
