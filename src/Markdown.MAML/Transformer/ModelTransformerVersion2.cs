@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Specialized;
 using Markdown.MAML.Parser;
+using System.Text.RegularExpressions;
 
 namespace Markdown.MAML.Transformer
 {
@@ -133,10 +134,21 @@ namespace Markdown.MAML.Transformer
                     return null;
                 }
 
-                syntax = new MamlSyntax()
+                if (Regex.IsMatch(headingNode.Text, (" \\(" + MarkdownStrings.DefaultParameterSetModifier + "\\)$")))
                 {
-                    ParameterSetName = headingNode.Text
-                };
+                    syntax = new MamlSyntax()
+                    {
+                        ParameterSetName = headingNode.Text.Substring(0, headingNode.Text.Length - MarkdownStrings.DefaultParameterSetModifier.Length)
+                    };
+                    
+                }
+                else
+                {
+                    syntax = new MamlSyntax()
+                    {
+                        ParameterSetName = headingNode.Text
+                    };
+                }
 
                 var codeBlock = CodeBlockRule();
             }
