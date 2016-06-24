@@ -19,7 +19,7 @@ The **Update-MarkdownHelpModule** cmdlet updates existing help markdown files an
 This cmdlet combines functionality of the [Update-MarkdownHelp](Update-MarkdownHelp) and [New-MarkdownHelp](New-MarkdownHelp) cmdlets to perform a bulk update.
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update a markdown help module
 ```
 PS C:\> Update-MarkdownHelpModule -Path ".\docs"
 
@@ -65,6 +65,7 @@ Accept wildcard characters: False
 ### -LogAppend
 Indicates that this cmdlet appends information to the log instead overwriting it.
 
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -79,7 +80,8 @@ Accept wildcard characters: False
 
 ### -LogPath
 Specifies a file path for log information.
-By default, the cmdlet writes the VERBOSE stream to the log.
+The cmdlet writes the VERBOSE stream to the log.
+If you specify the *Verbose* parameter, this cmdlet also writes that information to the console.
 
 
 ```yaml
@@ -124,12 +126,6 @@ This cmdlet returns a **FileInfo[]** object for updated and new files.
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version:](https://github.com/PowerShell/platyPS/blob/master/docs/Update-MarkdownHelpModule.md)
-
-[New-MarkdownHelp](New-MarkdownHelp.md)
-
-[Update-MarkdownHelp](Update-MarkdownHelp.md)
 
 [Character Encoding in the .NET Framework](https://msdn.microsoft.com/en-us/library/ms404377.aspx)
 

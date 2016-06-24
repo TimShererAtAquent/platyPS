@@ -9,7 +9,7 @@ online version: https://github.com/PowerShell/platyPS/blob/master/docs/Get-Markd
 Gets metadata from the header of a markdown file.
 ## SYNTAX
 
-### FromPath
+### FromPath (Default)
 ```
 Get-MarkdownMetadata -Path <String[]> [<CommonParameters>]
 ```
@@ -28,7 +28,6 @@ By default, PlatyPS stores help file name and markdown schema version.
 
 Metadata section can contain user-provided values for use with external tools.
 The [New-ExternalHelp](New-ExternalHelp.md) cmdlet ignores this metadata.
-
 ## EXAMPLES
 
 ### Example 1: Get metadata from a file
@@ -120,7 +119,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### String[]
-You can pipe a collection of paths to this cmdlet.
+You can pipe an array of paths to this cmdlet.
 ## OUTPUTS
 
 ### Dictionary[String, String]
@@ -129,7 +128,3 @@ The dictionary contains key-value pairs found in the markdown metadata block.
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version:](https://github.com/PowerShell/platyPS/blob/master/docs/Get-MarkdownMetadata.md)
-
-[New-ExternalHelp](New-ExternalHelp.md)

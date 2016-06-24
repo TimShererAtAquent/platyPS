@@ -101,9 +101,3 @@ The cmldet saves its results in the output folder that the *OutputPath* paramete
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version:](https://github.com/PowerShell/platyPS/blob/master/docs/New-ExternalHelpCab.md)
-
-[New-ExternalHelp](New-ExternalHelp.MD)
-
-[New-MarkdownHelp](New-MarkdownHelp.md)

@@ -17,9 +17,9 @@ Update-MarkdownHelp [-Path] <String[]> [[-Encoding] <Encoding>] [[-LogPath] <Str
 ## DESCRIPTION
 The **Update-MarkdownHelp** cmdlet updates PlatyPS markdown help files without completely replacing the content of the files.
 
-Some parameters attributes changes over time.
+Some parameter attributes change over time.
 For instance, parameter sets, types, default value, and required.
-The cmdlet updates markdown help to reflect those changes.
+This cmdlet updates markdown help to reflect those changes.
 It also adds placeholder text to the markdown file for any new parameter.
 
 To propagate changes to your markdown help files, do the following:
@@ -27,8 +27,6 @@ To propagate changes to your markdown help files, do the following:
 - Load the new version of the module into your Windows PowerShell session.
 - Run the **Update-MarkdownHelp** cmdlet to update the files.
 - Check new parameters metadata in the markdown files.
-
-
 ## EXAMPLES
 
 ### Example 1: Update all files in a folder
@@ -51,6 +49,7 @@ Mode                LastWriteTime         Length Name
 ```
 
 This command updates all markdown help files in the specified path to match the current cmdlets.
+
 ### Example 2: Update one file and capture log
 ```
 PS C:\> Update-MarkdownHelp -Path ".\docs\Update-MarkdownHelp.md" -LogPath ".\markdown.log"
@@ -65,6 +64,7 @@ Mode                LastWriteTime         Length Name
 
 This command updates a markdown help file.
 It writes log information to the markdown.log file.
+
 ## PARAMETERS
 
 ### -Encoding
@@ -105,7 +105,8 @@ Accept wildcard characters: False
 
 ### -LogPath
 Specifies a file path for log information.
-By default, the cmdlet writes the VERBOSE stream to the log.
+The cmdlet writes the VERBOSE stream to the log.
+If you specify the *Verbose* parameter, this cmdlet also writes that information to the console.
 
 
 ```yaml
@@ -149,10 +150,6 @@ This cmdlet returns a **FileInfo[]** object for updated files.
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version:](https://github.com/PowerShell/platyPS/blob/master/docs/Update-MarkdownHelp.md)
-
-[New-MarkdownHelp](New-MarkdownHelp.md)
 
 [Character Encoding in the .NET Framework](https://msdn.microsoft.com/en-us/library/ms404377.aspx)
 

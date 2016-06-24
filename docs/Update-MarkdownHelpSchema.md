@@ -18,10 +18,10 @@ Update-MarkdownHelpSchema [-Path] <String[]> [-OutputFolder] <String> [[-Encodin
 The **Update-MarkdownHelpSchema** cmdlet migrates markdown help files to the latest PlatyPS markdown help schema.
 We recommend you update to the latest schema.
 
-As of release 0.4.0, there are two schemas: 1.0.0 and 2.0.0.
+Currently, there are two schemas: 1.0.0 and 2.0.0.
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update to current schema
 ```
 PS C:\> Update-MarkdownHelpSchema -Path ".\Examples\PSReadLine.dll-help.md" -OutputFolder ".\PSReadLine"
 
@@ -121,8 +121,6 @@ This cmdlet returns a **FileInfo[]** object for updated files.
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version:](https://github.com/PowerShell/platyPS/blob/master/docs/Update-MarkdownHelpSchema.md)
 
 [Character Encoding in the .NET Framework](https://msdn.microsoft.com/en-us/library/ms404377.aspx)
 

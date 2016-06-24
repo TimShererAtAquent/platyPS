@@ -7,7 +7,6 @@ online version: https://github.com/PowerShell/platyPS/blob/master/docs/New-Exter
 # New-ExternalHelp
 ## SYNOPSIS
 Creates external help file based on markdown supported by PlatyPS.
-
 ## SYNTAX
 
 ```
@@ -35,7 +34,6 @@ Mode                LastWriteTime         Length Name
 
 This command creates an external help file in the specified location.
 This command uses the best practice that the folder name includes the locale.
-
 ### Example 2: Create help that uses custom encoding
 ```
 PS C:\> New-ExternalHelp -Path ".\docs" -OutputPath "out\PlatyPS\en-US" -Force -Encoding ([System.Text.Encoding]::Unicode)
@@ -57,7 +55,6 @@ The command specifies Unicode encoding for the created file.
 ### -OutputPath
 Specifies the path of a folder where this cmdlet saves your external help file.
 The folder name should end with a locale folder, as in the following example: `.\out\PlatyPS\en-US\`.
-
 
 ```yaml
 Type: String
@@ -94,7 +91,6 @@ Accept wildcard characters: False
 ### -Force
 Indicates that this cmdlet overwrites an existing file that has the same name.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -110,7 +106,6 @@ Accept wildcard characters: False
 ### -Path
 Specifies an array of paths of markdown files or folders.
 This cmdlet creates external help based on these files and folders.
-
 
 ```yaml
 Type: String[]
@@ -138,10 +133,6 @@ This cmdlet returns a **FileInfo[]** object for created files.
 
 ## RELATED LINKS
 
-[Online Version:](https://github.com/PowerShell/platyPS/blob/master/docs/New-ExternalHelp.md)
-
-[New-ExternalHelpCab](New-ExternalHelpCab.md)
+[PowerShell V2 External MAML Help](https://blogs.msdn.microsoft.com/powershell/2008/12/24/powershell-v2-external-maml-help/)
 
 [Schema](https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md)
-
-[PowerShell V2 External MAML Help](https://blogs.msdn.microsoft.com/powershell/2008/12/24/powershell-v2-external-maml-help/)
